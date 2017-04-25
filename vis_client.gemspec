@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "activerecord", "~> 3"
   s.add_runtime_dependency "valium"
   s.add_runtime_dependency "json"
-  s.add_runtime_dependency "system_timer"
   s.add_runtime_dependency "configurable"
   s.add_runtime_dependency "faraday"
   s.add_runtime_dependency "roar"
