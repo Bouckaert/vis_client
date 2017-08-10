@@ -10,8 +10,12 @@ module VisClient
     end
 
     def send_request(params, resource)
+      logger.debug 'Entrou send_request ----------------------------------------------------'
+      logger.debug params
+      logger.debug resource
       if config.deliver_notifications
-        faraday_request params, resource
+        a = faraday_request params, resource
+        logger.debug a
       else
         config.logger.info "Notifications are disabled, if you wanna see some notifications," \
           "please modify the configuration."
