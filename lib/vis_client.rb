@@ -26,6 +26,7 @@ module VisClient
   end
 
   def self.notify_delayed(resource, type, args)
+    logger.debug 'entrou notify ------------------------------------'
     elements = args.respond_to?(:map) ? args : [args]
     notifier_builder = NotifierBuilder.new(resource, type, elements)
     notifier_builder.build
